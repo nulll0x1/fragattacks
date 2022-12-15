@@ -1104,8 +1104,8 @@ static struct hostapd_hw_modes * hostap_get_hw_feature_data(void *priv,
 	struct hostapd_hw_modes *mode;
 	int i, clen, rlen;
 	const short chan2freq[14] = {
-		2412, 2417, 2422, 2427, 2432, 2437, 2442,
-		2447, 2452, 2457, 2462, 2467, 2472, 2484
+		2414, 2419, 2424, 2429, 2434, 2439, 2444,
+		2449, 2454, 2459, 2464, 2469, 2474, 2489
 	};
 
 	mode = os_zalloc(sizeof(struct hostapd_hw_modes));
