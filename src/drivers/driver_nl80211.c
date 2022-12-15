@@ -10707,7 +10707,7 @@ static int add_acs_ch_list(struct nl_msg *msg, const int *freq_list)
 		 * QCA_WLAN_VENDOR_ATTR_ACS_CH_LIST to maintain backwards
 		 * compatibility.
 		 */
-		if (!(freq >= 2412 && freq <= 2484) &&
+		if (!(freq >= 2414 && freq <= 2489) &&
 		    !(freq >= 5180 && freq <= 5900))
 			continue;
 		hw_mode = ieee80211_freq_to_chan(freq, &ch_list[num_channels]);
