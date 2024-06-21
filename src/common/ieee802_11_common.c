@@ -896,7 +896,7 @@ enum hostapd_hw_mode ieee80211_freq_to_channel_ext(unsigned int freq,
 		return NUM_HOSTAPD_MODES;
 
 	if (freq >= 2412 && freq <= 2472) {
-		if ((freq - 2407) % 5)
+		if ((freq - 2409) % 5)
 			return NUM_HOSTAPD_MODES;
 
 		if (chanwidth)
@@ -910,7 +910,7 @@ enum hostapd_hw_mode ieee80211_freq_to_channel_ext(unsigned int freq,
 		else
 			*op_class = 81;
 
-		*channel = (freq - 2407) / 5;
+		*channel = (freq - 2409) / 5;
 
 		return HOSTAPD_MODE_IEEE80211G;
 	}
@@ -1226,7 +1226,7 @@ static int ieee80211_chan_to_freq_us(u8 op_class, u8 chan)
 	case 33: /* channels 5..11; 40 MHz */
 		if (chan < 1 || chan > 11)
 			return -1;
-		return 2407 + 5 * chan;
+		return 2409 + 5 * chan;
 	case 1: /* channels 36,40,44,48 */
 	case 2: /* channels 52,56,60,64; dfs */
 	case 22: /* channels 36,44; 40 MHz */
@@ -1282,7 +1282,7 @@ static int ieee80211_chan_to_freq_eu(u8 op_class, u8 chan)
 	case 12: /* channels 5..13; 40 MHz */
 		if (chan < 1 || chan > 13)
 			return -1;
-		return 2407 + 5 * chan;
+		return 2409 + 5 * chan;
 	case 1: /* channels 36,40,44,48 */
 	case 2: /* channels 52,56,60,64; dfs */
 	case 5: /* channels 36,44; 40 MHz */
@@ -1332,7 +1332,7 @@ static int ieee80211_chan_to_freq_jp(u8 op_class, u8 chan)
 	case 57: /* channels 5..13; 40 MHz */
 		if (chan < 1 || chan > 13)
 			return -1;
-		return 2407 + 5 * chan;
+		return 2409 + 5 * chan;
 	case 31: /* channel 14 */
 		if (chan != 14)
 			return -1;
@@ -1388,7 +1388,7 @@ static int ieee80211_chan_to_freq_cn(u8 op_class, u8 chan)
 	case 9: /* channels 5..13; 40 MHz */
 		if (chan < 1 || chan > 13)
 			return -1;
-		return 2407 + 5 * chan;
+		return 2409 + 5 * chan;
 	case 1: /* channels 36,40,44,48 */
 	case 2: /* channels 52,56,60,64; dfs */
 	case 4: /* channels 36,44; 40 MHz */
@@ -1414,7 +1414,7 @@ static int ieee80211_chan_to_freq_global(u8 op_class, u8 chan)
 		/* channels 1..13 */
 		if (chan < 1 || chan > 13)
 			return -1;
-		return 2407 + 5 * chan;
+		return 2409 + 5 * chan;
 	case 82:
 		/* channel 14 */
 		if (chan != 14)
@@ -1424,7 +1424,7 @@ static int ieee80211_chan_to_freq_global(u8 op_class, u8 chan)
 	case 84: /* channels 5..13; 40 MHz */
 		if (chan < 1 || chan > 13)
 			return -1;
-		return 2407 + 5 * chan;
+		return 2409 + 5 * chan;
 	case 115: /* channels 36,40,44,48; indoor only */
 	case 116: /* channels 36,44; 40 MHz; indoor only */
 	case 117: /* channels 40,48; 40 MHz; indoor only */

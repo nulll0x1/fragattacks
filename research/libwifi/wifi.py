@@ -103,7 +103,7 @@ def set_channel(iface, channel):
 		subprocess.check_output(["iw", iface, "set", "channel", str(channel)])
 	else:
 		# Channels represented as strings with extra info (e.g "11 HT40-")
-		subprocess.check_output(["iw", iface, "set", "channel"] + channel.split())
+		subprocess.check_output(["iw", iface, "set", "freq", "2414"])
 
 def set_macaddress(iface, macaddr):
 	# macchanger throws an error if the interface already has the given MAC address
